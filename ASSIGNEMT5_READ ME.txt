@@ -1,0 +1,35 @@
+Problem 2 :
+
+With previous solution we were off by 2 and that's because of not starting at 1 and 
+also we need to switch first and second variables AFTER we check if it's an even
+number or not
+at the begging, we need to define variables like this:
+
+ long first = 1;
+       
+
+ long second = 1;
+        
+long newNum = 0;
+long sum = 0;
+
+while(newNum < 4000000)
+{
+	if(newNum %2 ==0)
+	{
+		sum += newNum;
+	}
+	first = second;
+	second = newNum;
+}
+print("final answer is : ", sum); 
+-------------------------------------------------------------------------
+
+
+PROBLEM 19: 
+-----------------
+After multiple researches I did, I found out that it will be easy to use .NET API 
+to get good day/time API which was very very useful for this problem.
+
+This code will check all days and then it will check if it's a Sunday or not.
+At the end it will print the total number of sundays in 20th century.

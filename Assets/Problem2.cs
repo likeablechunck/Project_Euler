@@ -16,23 +16,23 @@ public class Problem2 : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        int first = 1;
-        int second = 2;
+        long first = 1;
+        long second = 1;
+        long newNum = 0;
 
-        int newNum = first + second; // 3
-        int sum = 0;
+        //newNum = first + second; // 3
+        long sum = 0;
         while(newNum < 4000000)
         {
-            first = second;
-            second = newNum;
-
-            newNum = first + second;
-
             if(newNum % 2 == 0)
             {
                 print(newNum + " is even!");
                 sum += newNum;
             }
+            first = second;
+            second = newNum;
+
+            newNum = first + second;
         }
 
         print("Solution to Problem 2: " + sum);
